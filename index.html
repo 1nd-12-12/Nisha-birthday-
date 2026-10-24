@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Universe Made For You ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Password Protection Screen -->
+    <div id="passwordScreen" class="password-overlay">
+        <div class="password-box">
+            <h2>🔒 Enter Special Date</h2>
+            <p>Enter the secret date to unlock this universe</p>
+            <input type="password" id="passInput" placeholder="DD Month (e.g. 17 April)">
+            <button onclick="checkPassword()">Unlock ❤️</button>
+            <p id="errorMsg" class="error"></p>
+        </div>
+    </div>
+
+    <!-- Main Website Content (Hidden initially) -->
+    <div id="mainContent" class="container" style="display: none;">
+        
+        <!-- Header Section -->
+        <header class="hero">
+            <p class="tagline">A LITTLE UNIVERSE MADE FOR YOU</p>
+            <h1 class="title">Happy Birthday, Nisha ✨</h1>
+            <p class="subtitle">From your brother with love ❤️</p>
+            <div class="heart-pulse">❤️</div>
+        </header>
+
+        <!-- Our Story Section -->
+        <section class="card-section">
+            <p class="tagline">THE BEGINNING OF US</p>
+            <h2>Our Story</h2>
+            <p class="story-date">OCTOBER 2026</p>
+            <p class="story-text">
+                In a world full of billions of people, under the very same sky, 
+                having a sister like you is the greatest blessing.
+            </p>
+        </section>
+
+        <!-- Time Counter Section -->
+        <section class="card-section">
+            <p class="tagline">COUNTING EVERY SPECIAL MOMENT</p>
+            <h2>Our Time Together ⏱️</h2>
+            <div class="counter-grid">
+                <div class="counter-box"><span id="days">0</span><small>DAYS</small></div>
+                <div class="counter-box"><span id="hours">0</span><small>HOURS</small></div>
+                <div class="counter-box"><span id="minutes">0</span><small>MINUTES</small></div>
+                <div class="counter-box"><span id="seconds">0</span><small>SECONDS</small></div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Slider (All 39 Photos) -->
+        <section class="card-section">
+            <p class="tagline">LITTLE PIECES OF US</p>
+            <h2>Memories 🖼️</h2>
+            <div class="slider-container">
+                <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="slider">
+                    <img src="Nisha1.jpg" class="slide active" alt="Memory 1">
+                    <img src="Nisha2.jpg" class="slide" alt="Memory 2">
+                    <img src="Nisha3.jpg" class="slide" alt="Memory 3">
+                    <img src="Nisha4.jpg" class="slide" alt="Memory 4">
+                    <img src="Nisha5.jpg" class="slide" alt="Memory 5">
+                    <img src="Nisha6.jpg" class="slide" alt="Memory 6">
+                    <img src="Nisha7.jpg" class="slide" alt="Memory 7">
+                    <img src="Nisha8.jpg" class="slide" alt="Memory 8">
+                    <img src="Nisha9.jpg" class="slide" alt="Memory 9">
+                    <img src="Nisha10.jpg" class="slide" alt="Memory 10">
+                    <img src="Nisha11.jpg" class="slide" alt="Memory 11">
+                    <img src="Nisha12.jpg" class="slide" alt="Memory 12">
+                    <img src="Nisha13.jpg" class="slide" alt="Memory 13">
+                    <img src="Nisha14.jpg" class="slide" alt="Memory 14">
+                    <img src="Nisha15.jpg" class="slide" alt="Memory 15">
+                    <img src="Nisha16.jpg" class="slide" alt="Memory 16">
+                    <img src="Nisha17.jpg" class="slide" alt="Memory 17">
+                    <img src="Nisha18.jpg" class="slide" alt="Memory 18">
+                    <img src="Nisha19.jpg" class="slide" alt="Memory 19">
+                    <img src="Nisha20.jpg" class="slide" alt="Memory 20">
+                    <img src="Nisha21.jpg" class="slide" alt="Memory 21">
+                    <img src="Nisha22.jpg" class="slide" alt="Memory 22">
+                    <img src="Nisha23.jpg" class="slide" alt="Memory 23">
+                    <img src="Nisha24.jpg" class="slide" alt="Memory 24">
+                    <img src="Nisha25.jpg" class="slide" alt="Memory 25">
+                    <img src="Nisha26.jpg" class="slide" alt="Memory 26">
+                    <img src="Nisha27.jpg" class="slide" alt="Memory 27">
+                    <img src="Nisha28.jpg" class="slide" alt="Memory 28">
+                    <img src="Nisha29.jpg" class="slide" alt="Memory 29">
+                    <img src="Nisha30.jpg" class="slide" alt="Memory 30">
+                    <img src="Nisha31.jpg" class="slide" alt="Memory 31">
+                    <img src="Nisha32.jpg" class="slide" alt="Memory 32">
+                    <img src="Nisha33.jpg" class="slide" alt="Memory 33">
+                    <img src="Nisha34.jpg" class="slide" alt="Memory 34">
+                    <img src="Nisha35.jpg" class="slide" alt="Memory 35">
+                    <img src="Nisha36.jpg" class="slide" alt="Memory 36">
+                    <img src="Nisha37.jpg" class="slide" alt="Memory 37">
+                    <img src="Nisha38.jpg" class="slide" alt="Memory 38">
+                    <img src="Nisha39.jpg" class="slide" alt="Memory 39">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Interactive Note Jar Section -->
+        <section class="card-section">
+            <p class="tagline">A JAR FULL OF SWEET THOUGHTS</p>
+            <h2>Reasons You Are Special 🏺</h2>
+            <div class="note-jar-card">
+                <p id="noteText" class="note-display">Click the button below to pick a note! 💕</p>
+                <button class="btn-primary" onclick="pickNote()">PICK ANOTHER NOTE 💌</button>
+            </div>
+        </section>
+
+        <!-- Letter Section -->
+        <section class="card-section letter-card">
+            <p class="tagline">FROM MY HEART TO YOURS</p>
+            <h2>A Letter For You ✉️</h2>
+            <div class="letter-body">
+                <h3>Dear Sister Nisha,</h3>
+                <p>
+                    I hope your birthday is as bright, warm, and beautiful as you make life for everyone around you.
+                    May all your dreams come true and may you always stay happy and smiling!
+                </p>
+                <p class="sign">Always here for you ❤️</p>
+            </div>
+        </section>
+
+        <!-- Playlist / Music Player Section -->
+        <section class="card-section">
+            <p class="tagline">SONGS THAT REMIND ME OF YOU</p>
+            <h2>Our Playlist 🎵</h2>
+            <div class="playlist-box">
+                <p id="songTitle">Music 1</p>
+                <audio id="audioPlayer" controls src="Music1.mp3"></audio>
+                <div class="playlist-buttons">
+                    <button class="btn-sub" onclick="playTrack('Music1.mp3', 'Music 1')">Track 1</button>
+                    <button class="btn-sub" onclick="playTrack('Music2.mp3', 'Music 2')">Track 2</button>
+                    <button class="btn-sub" onclick="playTrack('Music3.mp3', 'Music 3')">Track 3</button>
+                    <button class="btn-sub" onclick="playTrack('Music4.mp3', 'Music 4')">Track 4</button>
+                    <button class="btn-sub" onclick="playTrack('Music5.mp3', 'Music 5')">Track 5</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
