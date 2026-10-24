@@ -1,12 +1,11 @@
 // 1. Password Check Logic
 function checkPassword() {
     let inputVal = document.getElementById("passInput").value.trim().toLowerCase();
-    // '17 april' ya '17-april' dono pe kaam karega
     if (inputVal === "17 april" || inputVal === "17-april" || inputVal === "17") {
         document.getElementById("passwordScreen").style.display = "none";
         document.getElementById("mainContent").style.display = "flex";
     } else {
-        document.getElementById("errorMsg").innerText = "Galat password! Sahi date daalo bhai.";
+        document.getElementById("errorMsg").innerText = "Galat password! '17 April' daalo.";
     }
 }
 
@@ -48,13 +47,13 @@ function moveSlide(step) {
     showSlide(currentSlide);
 }
 
-// 4. Interactive Note Jar Logic
+// 4. Interactive Note Jar Logic (Romantic)
 const notes = [
-    "Always stay happy and cheerful! ✨",
-    "You are the best sister ever! ❤️",
-    "Never stop pursuing your goals and dreams! 🌟",
-    "May your day be full of joy and sweet moments! 🍰",
-    "Keep spreading brightness everywhere you go! 🌈"
+    "Your smile is my favorite thing in the world! ✨",
+    "You make every single day feel so special. ❤️",
+    "I love you more than words can ever express! 🌟",
+    "You are my peace, my happiness, and my home. 🥰",
+    "Thank you for being the best part of my life! 🌹"
 ];
 
 function pickNote() {
