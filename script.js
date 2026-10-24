@@ -5,11 +5,21 @@ function checkPassword() {
         document.getElementById("passwordScreen").style.display = "none";
         document.getElementById("mainContent").style.display = "flex";
     } else {
-        document.getElementById("errorMsg").innerText = "Galat password! '17 April' daalo.";
+        document.getElementById("errorMsg").innerText = "Galat password! Sahi date daalo (17 April).";
     }
 }
 
-// 2. Live Time Counter
+// 2. Secret Message Reveal
+function revealSecret(element) {
+    element.classList.toggle("revealed");
+}
+
+// 3. Celebration Alert / Effect
+function triggerCelebration() {
+    alert("🎉 Happy Birthday Meri Jaan! Tumhari zindagi khushiyon se bhar jaye! 💖✨");
+}
+
+// 4. Live Time Counter
 const startDate = new Date("2026-01-01T00:00:00"); 
 
 function updateCounter() {
@@ -29,7 +39,7 @@ function updateCounter() {
 setInterval(updateCounter, 1000);
 updateCounter();
 
-// 3. Photo Slider Logic (39 Photos)
+// 5. Photo Slider Logic (39 Photos)
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -47,13 +57,13 @@ function moveSlide(step) {
     showSlide(currentSlide);
 }
 
-// 4. Interactive Note Jar Logic (Romantic)
+// 6. Interactive Emotional Note Jar Logic (Hinglish)
 const notes = [
-    "Your smile is my favorite thing in the world! ✨",
-    "You make every single day feel so special. ❤️",
-    "I love you more than words can ever express! 🌟",
-    "You are my peace, my happiness, and my home. 🥰",
-    "Thank you for being the best part of my life! 🌹"
+    "Tumhari pyari si muskan mera pura din bana deti hai! ✨",
+    "Tum meri zindagi ka sabse khoobsurat hissa ho. ❤️",
+    "Tumhe paakar main duniya ka sabse khushnaseeb insaan ban gaya hoon. 🌟",
+    "Tumse baatein kiye bina mera ek din bhi nahi guzarta. 🥰",
+    "Hamesha aise hi mere sath rehna, meri jaan! 🌹"
 ];
 
 function pickNote() {
@@ -61,7 +71,7 @@ function pickNote() {
     document.getElementById("noteText").innerText = randomNote;
 }
 
-// 5. Music Player Logic
+// 7. Music Player Logic
 function playTrack(fileName, title) {
     const audio = document.getElementById("audioPlayer");
     const songTitle = document.getElementById("songTitle");
