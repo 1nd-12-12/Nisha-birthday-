@@ -77,8 +77,13 @@ function pickNote() {
     document.getElementById("noteText").innerText = randomNote;
 }
 
-// 7. Music Player Logic
+// 7. Music Player Logic (Stops background music when playlist song plays)
 function playTrack(fileName, title) {
+    const bgMusic = document.getElementById("bgMusic");
+    if (bgMusic) {
+        bgMusic.pause();
+    }
+
     const audio = document.getElementById("audioPlayer");
     const songTitle = document.getElementById("songTitle");
     audio.src = fileName;
