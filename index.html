@@ -23,6 +23,12 @@
         </div>
     </div>
 
+    <!-- Photo Full View Modal -->
+    <div id="photoModal" class="photo-modal" onclick="closePhotoModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImg">
+    </div>
+
     <!-- Main Website Content -->
     <div id="mainContent" class="container" style="display: none;">
         
@@ -30,20 +36,20 @@
         <header class="hero">
             <p class="tagline">SIRF TUMHARE LIYE</p>
             <h1 class="title">Happy Birthday, Nisha ✨</h1>
-            <p class="subtitle">"Hazaaron chehre hain is duniya me, par meri aankhon ko bas teri hi talaash hai..." ❤️</p>
+            <p class="subtitle">"Tu meri subah ka noor, tu meri raat ka suroor... Tere bina sab adhura hai." ❤️</p>
             <div class="heart-pulse">❤️</div>
         </header>
 
-        <!-- Our Story / Shayari Section -->
+        <!-- Nayi Heart-Touching Shayari Section -->
         <section class="card-section">
             <p class="tagline">MERE DIL KI BAAT</p>
-            <h2>Ek Pyari Shayari 📜</h2>
+            <h2>Dil Se Ek Pyari Shayari 📜</h2>
             <p class="story-date">OUR SPECIAL JOURNEY</p>
-            <p class="story-text" style="font-style: italic; line-height: 1.8;">
-                "Tum hanso toh yeh dil bhi khil jata hai,<br>
-                Tumse milkar mujhe sab kuch mil jata hai.<br>
-                Khuda se bas yahi dua hai meri,<br>
-                Ki har janam me mujhe tumhara hi saath mil jaye." ✨
+            <p class="story-text" style="font-style: italic; line-height: 1.8; color: #c9184a; font-weight: 500;">
+                "Tumhari muskaan me jo baat hai,<br>
+                Woh meri zindagi ko sukoon de jaati hai...<br>
+                Duniya me chahe hazaaron chehre ho,<br>
+                Par meri aankhein bas tum par hi ruk jaati hain." ✨
             </p>
         </section>
 
@@ -59,54 +65,74 @@
             </div>
         </section>
 
-        <!-- Photo Gallery Slider (39 Photos) -->
+        <!-- Photo Gallery Slider (39 Photos + Full View Tap Option) -->
         <section class="card-section">
-            <p class="tagline">YAADEIN</p>
+            <p class="tagline">YAADEIN (TAP PHOTO FOR FULL VIEW)</p>
             <h2>Hamari Pyaari Tasveerein 🖼️</h2>
             <div class="slider-container">
                 <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
                 <div class="slider">
-                    <img src="Nisha1.jpg" class="slide active" alt="Memory 1">
-                    <img src="Nisha2.jpg" class="slide" alt="Memory 2">
-                    <img src="Nisha3.jpg" class="slide" alt="Memory 3">
-                    <img src="Nisha4.jpg" class="slide" alt="Memory 4">
-                    <img src="Nisha5.jpg" class="slide" alt="Memory 5">
-                    <img src="Nisha6.jpg" class="slide" alt="Memory 6">
-                    <img src="Nisha7.jpg" class="slide" alt="Memory 7">
-                    <img src="Nisha8.jpg" class="slide" alt="Memory 8">
-                    <img src="Nisha9.jpg" class="slide" alt="Memory 9">
-                    <img src="Nisha10.jpg" class="slide" alt="Memory 10">
-                    <img src="Nisha11.jpg" class="slide" alt="Memory 11">
-                    <img src="Nisha12.jpg" class="slide" alt="Memory 12">
-                    <img src="Nisha13.jpg" class="slide" alt="Memory 13">
-                    <img src="Nisha14.jpg" class="slide" alt="Memory 14">
-                    <img src="Nisha15.jpg" class="slide" alt="Memory 15">
-                    <img src="Nisha16.jpg" class="slide" alt="Memory 16">
-                    <img src="Nisha17.jpg" class="slide" alt="Memory 17">
-                    <img src="Nisha18.jpg" class="slide" alt="Memory 18">
-                    <img src="Nisha19.jpg" class="slide" alt="Memory 19">
-                    <img src="Nisha20.jpg" class="slide" alt="Memory 20">
-                    <img src="Nisha21.jpg" class="slide" alt="Memory 21">
-                    <img src="Nisha22.jpg" class="slide" alt="Memory 22">
-                    <img src="Nisha23.jpg" class="slide" alt="Memory 23">
-                    <img src="Nisha24.jpg" class="slide" alt="Memory 24">
-                    <img src="Nisha25.jpg" class="slide" alt="Memory 25">
-                    <img src="Nisha26.jpg" class="slide" alt="Memory 26">
-                    <img src="Nisha27.jpg" class="slide" alt="Memory 27">
-                    <img src="Nisha28.jpg" class="slide" alt="Memory 28">
-                    <img src="Nisha29.jpg" class="slide" alt="Memory 29">
-                    <img src="Nisha30.jpg" class="slide" alt="Memory 30">
-                    <img src="Nisha31.jpg" class="slide" alt="Memory 31">
-                    <img src="Nisha32.jpg" class="slide" alt="Memory 32">
-                    <img src="Nisha33.jpg" class="slide" alt="Memory 33">
-                    <img src="Nisha34.jpg" class="slide" alt="Memory 34">
-                    <img src="Nisha35.jpg" class="slide" alt="Memory 35">
-                    <img src="Nisha36.jpg" class="slide" alt="Memory 36">
-                    <img src="Nisha37.jpg" class="slide" alt="Memory 37">
-                    <img src="Nisha38.jpg" class="slide" alt="Memory 38">
-                    <img src="Nisha39.jpg" class="slide" alt="Memory 39">
+                    <img src="Nisha1.jpg" class="slide active" alt="Memory 1" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha2.jpg" class="slide" alt="Memory 2" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha3.jpg" class="slide" alt="Memory 3" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha4.jpg" class="slide" alt="Memory 4" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha5.jpg" class="slide" alt="Memory 5" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha6.jpg" class="slide" alt="Memory 6" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha7.jpg" class="slide" alt="Memory 7" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha8.jpg" class="slide" alt="Memory 8" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha9.jpg" class="slide" alt="Memory 9" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha10.jpg" class="slide" alt="Memory 10" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha11.jpg" class="slide" alt="Memory 11" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha12.jpg" class="slide" alt="Memory 12" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha13.jpg" class="slide" alt="Memory 13" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha14.jpg" class="slide" alt="Memory 14" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha15.jpg" class="slide" alt="Memory 15" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha16.jpg" class="slide" alt="Memory 16" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha17.jpg" class="slide" alt="Memory 17" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha18.jpg" class="slide" alt="Memory 18" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha19.jpg" class="slide" alt="Memory 19" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha20.jpg" class="slide" alt="Memory 20" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha21.jpg" class="slide" alt="Memory 21" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha22.jpg" class="slide" alt="Memory 22" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha23.jpg" class="slide" alt="Memory 23" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha24.jpg" class="slide" alt="Memory 24" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha25.jpg" class="slide" alt="Memory 25" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha26.jpg" class="slide" alt="Memory 26" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha27.jpg" class="slide" alt="Memory 27" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha28.jpg" class="slide" alt="Memory 28" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha29.jpg" class="slide" alt="Memory 29" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha30.jpg" class="slide" alt="Memory 30" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha31.jpg" class="slide" alt="Memory 31" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha32.jpg" class="slide" alt="Memory 32" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha33.jpg" class="slide" alt="Memory 33" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha34.jpg" class="slide" alt="Memory 34" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha35.jpg" class="slide" alt="Memory 35" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha36.jpg" class="slide" alt="Memory 36" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha37.jpg" class="slide" alt="Memory 37" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha38.jpg" class="slide" alt="Memory 38" onclick="openPhotoModal(this.src)">
+                    <img src="Nisha39.jpg" class="slide" alt="Memory 39" onclick="openPhotoModal(this.src)">
                 </div>
                 <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <p style="font-size:0.75rem; color:#888; margin-top:5px;">💡 Kisibhi photo par tap karke poori screen me dekho</p>
+        </section>
+
+        <!-- Multi-page Secret Diary Section -->
+        <section class="card-section">
+            <p class="tagline">MY PRIVATE DIARY</p>
+            <h2>Pyari Diary 📖</h2>
+            <div class="diary-box">
+                <div class="diary-page">
+                    <p id="diaryContent" class="diary-text">
+                        <strong>First Page - Message from Aadi ❤️:</strong><br><br>
+                        "Meri Pyaari Nisha, yeh diary ka pehla panna sirf tumhare liye hai. Zindagi me kitne bhi utaar-chadhaw aayein, mera ye vada hai ki Aadi hamesha tumhara hath thame rahega. Tum meri sabse khash pasand ho aur rahogi!"
+                    </p>
+                </div>
+                <div class="diary-nav">
+                    <button class="btn-sub" onclick="changeDiaryPage(-1)">⏮️ Previous</button>
+                    <span id="pageNum" style="font-size:0.85rem; font-weight:600; color:#c9184a;">Page 1/4</span>
+                    <button class="btn-sub" onclick="changeDiaryPage(1)">Next ⏭️</button>
+                </div>
             </div>
         </section>
 
@@ -140,7 +166,7 @@
                     Tumhara yeh janamdin mere liye kisi tyohar se kam nahi hai. Isliye isko ekdam grand celebration banaya hai. 
                     Bhagwan se yahi dua hai ki tumhari har khushi lambi ho aur tum hamesha meri zindagi ki roshni bankar raho.
                 </p>
-                <p class="sign">Hamesha aur sirf tumhara ❤️</p>
+                <p class="sign">Hamesha aur sirf tumhara Aadi ❤️</p>
             </div>
         </section>
 
@@ -157,14 +183,13 @@
             <p class="tagline">HAMARE GAANE AUR YAADEIN</p>
             <h2>Music Playlist 🎵</h2>
             
-            <!-- Nisha 11 to 16 Photo Mini Grid -->
             <div class="music-photo-grid">
-                <img src="Nisha11.jpg" alt="Memory 11">
-                <img src="Nisha12.jpg" alt="Memory 12">
-                <img src="Nisha13.jpg" alt="Memory 13">
-                <img src="Nisha14.jpg" alt="Memory 14">
-                <img src="Nisha15.jpg" alt="Memory 15">
-                <img src="Nisha16.jpg" alt="Memory 16">
+                <img src="Nisha11.jpg" alt="Memory 11" onclick="openPhotoModal(this.src)">
+                <img src="Nisha12.jpg" alt="Memory 12" onclick="openPhotoModal(this.src)">
+                <img src="Nisha13.jpg" alt="Memory 13" onclick="openPhotoModal(this.src)">
+                <img src="Nisha14.jpg" alt="Memory 14" onclick="openPhotoModal(this.src)">
+                <img src="Nisha15.jpg" alt="Memory 15" onclick="openPhotoModal(this.src)">
+                <img src="Nisha16.jpg" alt="Memory 16" onclick="openPhotoModal(this.src)">
             </div>
 
             <div class="playlist-box">
@@ -178,6 +203,28 @@
                     <button class="btn-sub" onclick="playTrack('Music4.mp3', 'Track 4')">Track 4</button>
                     <button class="btn-sub" onclick="playTrack('Music5.mp3', 'Track 5')">Track 5</button>
                 </div>
+            </div>
+        </section>
+
+        <!-- Secret Video Section (Sabse Niche & Locked with 'aadi' password) -->
+        <section class="card-section secret-video-section">
+            <p class="tagline">SECRET MEMORY VIDEO</p>
+            <h2>Special Video For Nisha 🎥</h2>
+            
+            <!-- Video Lock Box -->
+            <div id="videoLockBox" class="video-lock-box">
+                <p style="font-size:0.85rem; color:#777; margin-bottom:10px;">🔒 Enter Password to Watch Video</p>
+                <input type="password" id="videoPassInput" placeholder="Password daalo (aadi)">
+                <button class="btn-primary" onclick="unlockVideo()" style="margin-top:10px;">Unlock Video 🎬</button>
+                <p id="videoErrorMsg" class="error"></p>
+            </div>
+
+            <!-- Hidden Video Player (Unhides on unlocking) -->
+            <div id="videoPlayerBox" style="display:none; margin-top:15px;">
+                <video id="secretVideo" controls style="width:100%; border-radius:15px; border:2px solid #ff4d6d;">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
             </div>
         </section>
 

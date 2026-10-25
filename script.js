@@ -1,11 +1,10 @@
-// 1. Password Check Logic & Background Music Autoplay
+// 1. Main Password Check Logic & Autoplay
 function checkPassword() {
     let inputVal = document.getElementById("passInput").value.trim().toLowerCase();
     if (inputVal === "17 april" || inputVal === "17-april" || inputVal === "17") {
         document.getElementById("passwordScreen").style.display = "none";
         document.getElementById("mainContent").style.display = "flex";
         
-        // Play background music automatically upon unlocking
         const bgMusic = document.getElementById("bgMusic");
         bgMusic.play().catch(error => {
             console.log("Autoplay blocked, user interaction required.");
@@ -15,17 +14,63 @@ function checkPassword() {
     }
 }
 
-// 2. Secret Message Reveal
+// 2. Photo Modal (Full Screen View)
+function openPhotoModal(src) {
+    const modal = document.getElementById("photoModal");
+    const modalImg = document.getElementById("fullImg");
+    modal.style.display = "flex";
+    modalImg.src = src;
+}
+
+function closePhotoModal() {
+    document.getElementById("photoModal").style.display = "none";
+}
+
+// 3. Multi-page Diary Logic
+const diaryPages = [
+    `<strong>First Page - Message from Aadi ❤️:</strong><br><br>"Meri Pyaari Nisha, yeh diary ka pehla panna sirf tumhare liye hai. Zindagi me kitne bhi utaar-chadhaw aayein, mera ye vada hai ki Aadi hamesha tumhara hath thame rahega. Tum meri sabse khash pasand ho aur rahogi!"`,
+    `<strong>Page 2 - Special Moments 💕:</strong><br><br>"Tumse milne ke baad har ek din special ban gaya hai. Jab tum muskurati ho, lagta hai poori duniya ki khushi ek jagah simat aayi ho."`,
+    `<strong>Page 3 - Promises 🌟:</strong><br><br>"Main vada karta hoon ki tumhare har birthday ko itna hi magical banaunga. Hamesha tumhare sapnon ko support karunga aur tumhara khayal rakhunga."`,
+    `<strong>Page 4 - Forever & Always 🌹:</strong><br><br>"Chahe hum kahin bhi ho, mera dil hamesha tumhare paas hi rahega. Happy Birthday again, my love Nisha!"`
+];
+
+let currentDiaryIndex = 0;
+
+function changeDiaryPage(direction) {
+    currentDiaryIndex += direction;
+    if (currentDiaryIndex < 0) currentDiaryIndex = 0;
+    if (currentDiaryIndex >= diaryPages.length) currentDiaryIndex = diaryPages.length - 1;
+
+    document.getElementById("diaryContent").innerHTML = diaryPages[currentDiaryIndex];
+    document.getElementById("pageNum").innerText = `Page ${currentDiaryIndex + 1}/${diaryPages.length}`;
+}
+
+// 4. Secret Video Unlock (Password: 'aadi')
+function unlockVideo() {
+    let pass = document.getElementById("videoPassInput").value.trim().toLowerCase();
+    if (pass === "aadi") {
+        document.getElementById("videoLockBox").style.display = "none";
+        document.getElementById("videoPlayerBox").style.display = "block";
+        
+        // Stop background music when video plays
+        const bgMusic = document.getElementById("bgMusic");
+        if (bgMusic) bgMusic.pause();
+    } else {
+        document.getElementById("videoErrorMsg").innerText = "Galat password! Hint: Name";
+    }
+}
+
+// 5. Secret Message Reveal
 function revealSecret(element) {
     element.classList.toggle("revealed");
 }
 
-// 3. Celebration Alert / Effect
+// 6. Celebration Alert
 function triggerCelebration() {
-    alert("🎉 Happy Birthday Meri Jaan! Tumhari zindagi khushiyon se bhar jaye! 💖✨");
+    alert("🎉 Happy Birthday Meri Jaan Nisha! Aadi loves you so much! 💖✨");
 }
 
-// 4. Live Time Counter (Set to 1.5 Years ago approx: April 2025)
+// 7. Live Time Counter (Set to April 2025)
 const startDate = new Date("2025-04-17T00:00:00"); 
 
 function updateCounter() {
@@ -45,7 +90,7 @@ function updateCounter() {
 setInterval(updateCounter, 1000);
 updateCounter();
 
-// 5. Photo Slider Logic (39 Photos)
+// 8. Photo Slider Logic
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -63,13 +108,13 @@ function moveSlide(step) {
     showSlide(currentSlide);
 }
 
-// 6. Interactive Emotional Note Jar Logic (Hinglish Mix)
+// 9. Interactive Note Jar Logic
 const notes = [
     "Tumhari pyari si muskan mera pura din bana deti hai! ✨",
     "Tum meri zindagi ka sabse khoobsurat hissa ho. ❤️",
     "Tumhe paakar main duniya ka sabse khushnaseeb insaan ban gaya hoon. 🌟",
     "Tumse baatein kiye bina mera ek din bhi nahi guzarta. 🥰",
-    "Hamesha aise hi mere sath rehna, meri jaan! 🌹"
+    "Hamesha aise hi Aadi ke sath rehna, meri jaan! 🌹"
 ];
 
 function pickNote() {
@@ -77,12 +122,10 @@ function pickNote() {
     document.getElementById("noteText").innerText = randomNote;
 }
 
-// 7. Music Player Logic (Stops background music when playlist song plays)
+// 10. Music Player Logic
 function playTrack(fileName, title) {
     const bgMusic = document.getElementById("bgMusic");
-    if (bgMusic) {
-        bgMusic.pause();
-    }
+    if (bgMusic) bgMusic.pause();
 
     const audio = document.getElementById("audioPlayer");
     const songTitle = document.getElementById("songTitle");
