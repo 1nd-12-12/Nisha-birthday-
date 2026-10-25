@@ -1,11 +1,17 @@
-// 1. Password Check Logic
+// 1. Password Check Logic & Background Music Autoplay
 function checkPassword() {
     let inputVal = document.getElementById("passInput").value.trim().toLowerCase();
     if (inputVal === "17 april" || inputVal === "17-april" || inputVal === "17") {
         document.getElementById("passwordScreen").style.display = "none";
         document.getElementById("mainContent").style.display = "flex";
+        
+        // Play background music automatically upon unlocking
+        const bgMusic = document.getElementById("bgMusic");
+        bgMusic.play().catch(error => {
+            console.log("Autoplay blocked, user interaction required.");
+        });
     } else {
-        document.getElementById("errorMsg").innerText = "Galat password! Sahi date daalo (17 April).";
+        document.getElementById("errorMsg").innerText = "Galat password! Sahi date daalo.";
     }
 }
 
@@ -19,8 +25,8 @@ function triggerCelebration() {
     alert("🎉 Happy Birthday Meri Jaan! Tumhari zindagi khushiyon se bhar jaye! 💖✨");
 }
 
-// 4. Live Time Counter
-const startDate = new Date("2026-01-01T00:00:00"); 
+// 4. Live Time Counter (Set to 1.5 Years ago approx: April 2025)
+const startDate = new Date("2025-04-17T00:00:00"); 
 
 function updateCounter() {
     const now = new Date();
@@ -57,7 +63,7 @@ function moveSlide(step) {
     showSlide(currentSlide);
 }
 
-// 6. Interactive Emotional Note Jar Logic (Hinglish)
+// 6. Interactive Emotional Note Jar Logic (Hinglish Mix)
 const notes = [
     "Tumhari pyari si muskan mera pura din bana deti hai! ✨",
     "Tum meri zindagi ka sabse khoobsurat hissa ho. ❤️",

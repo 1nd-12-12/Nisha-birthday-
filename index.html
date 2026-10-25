@@ -9,12 +9,15 @@
 </head>
 <body>
 
-    <!-- Password Protection Screen -->
+    <!-- Hidden Background Audio for Autoplay -->
+    <audio id="bgMusic" src="music.mp3" preload="auto" loop></audio>
+
+    <!-- Password Protection Screen (Suspenseful, no hint) -->
     <div id="passwordScreen" class="password-overlay">
         <div class="password-box">
-            <h2>🔒 Secret Date Daalo</h2>
-            <p>Wo khaas tareekh daalo jisse yeh duniya khulegi</p>
-            <input type="password" id="passInput" placeholder="Jaise: 17 April">
+            <h2>🔒 Enter Special Date</h2>
+            <p>Wo khaas tareekh daalo jisse yeh secret universe khulega</p>
+            <input type="password" id="passInput" placeholder="Enter Password">
             <button onclick="checkPassword()">Unlock Karo ❤️</button>
             <p id="errorMsg" class="error"></p>
         </div>
@@ -26,7 +29,7 @@
         <!-- Header Section -->
         <header class="hero">
             <p class="tagline">SIRF TUMHARE LIYE</p>
-            <h1 class="title">Janamdin Ki Hardik Shubhkamnaye, Nisha ✨</h1>
+            <h1 class="title">Happy Birthday, Nisha ✨</h1>
             <p class="subtitle">"Hazaaron chehre hain is duniya me, par meri aankhon ko bas teri hi talaash hai..." ❤️</p>
             <div class="heart-pulse">❤️</div>
         </header>
@@ -35,16 +38,16 @@
         <section class="card-section">
             <p class="tagline">MERE DIL KI BAAT</p>
             <h2>Ek Pyari Shayari 📜</h2>
-            <p class="story-date">OCTOBER 2026</p>
+            <p class="story-date">OUR SPECIAL JOURNEY</p>
             <p class="story-text" style="font-style: italic; line-height: 1.8;">
                 "Tum hanso toh yeh dil bhi khil jata hai,<br>
                 Tumse milkar mujhe sab kuch mil jata hai.<br>
                 Khuda se bas yahi dua hai meri,<br>
-                Ki har janam me mujhe tumhara hi saath mil jata hai." ✨
+                Ki har janam me mujhe tumhara hi saath mil jaye." ✨
             </p>
         </section>
 
-        <!-- Time Counter Section -->
+        <!-- Time Counter Section (1.5 Years Approx) -->
         <section class="card-section">
             <p class="tagline">HAR EK LAMHA KHAS HAI</p>
             <h2>Hum Sath Hain ⏱️</h2>
@@ -165,14 +168,15 @@
             </div>
 
             <div class="playlist-box">
-                <p id="songTitle" style="font-weight: 600; color: #c9184a; margin-bottom: 5px;">Music 1</p>
-                <audio id="audioPlayer" controls src="Music1.mp3"></audio>
+                <p id="songTitle" style="font-weight: 600; color: #c9184a; margin-bottom: 5px;">Special Track (music.mp3)</p>
+                <audio id="audioPlayer" controls src="music.mp3"></audio>
                 <div class="playlist-buttons">
-                    <button class="btn-sub" onclick="playTrack('Music1.mp3', 'Music 1')">Track 1</button>
-                    <button class="btn-sub" onclick="playTrack('Music2.mp3', 'Music 2')">Track 2</button>
-                    <button class="btn-sub" onclick="playTrack('Music3.mp3', 'Music 3')">Track 3</button>
-                    <button class="btn-sub" onclick="playTrack('Music4.mp3', 'Music 4')">Track 4</button>
-                    <button class="btn-sub" onclick="playTrack('Music5.mp3', 'Music 5')">Track 5</button>
+                    <button class="btn-sub" onclick="playTrack('music.mp3', 'Special Track')">Main Song</button>
+                    <button class="btn-sub" onclick="playTrack('Music1.mp3', 'Track 1')">Track 1</button>
+                    <button class="btn-sub" onclick="playTrack('Music2.mp3', 'Track 2')">Track 2</button>
+                    <button class="btn-sub" onclick="playTrack('Music3.mp3', 'Track 3')">Track 3</button>
+                    <button class="btn-sub" onclick="playTrack('Music4.mp3', 'Track 4')">Track 4</button>
+                    <button class="btn-sub" onclick="playTrack('Music5.mp3', 'Track 5')">Track 5</button>
                 </div>
             </div>
         </section>

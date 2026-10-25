@@ -313,6 +313,7 @@ body {
 
 /* Playlist */
 .playlist-box {
+    marker: none;
     margin-top: 15px;
 }
 
@@ -337,4 +338,3 @@ audio {
     cursor: pointer;
     font-size: 0.8rem;
 }
-
