@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,9 @@
     <div id="passwordScreen" class="password-overlay">
         <div class="password-box">
             <h2>🔒 Enter Special Date</h2>
-            <p>Wo khaas tareekh daalo jisse yeh secret universe khulega</p>
+            <p>Enter the secret date to unlock this universe</p>
             <input type="password" id="passInput" placeholder="Enter Password">
-            <button onclick="checkPassword()">Unlock Karo ❤️</button>
+            <button onclick="checkPassword()">Unlock ❤️</button>
             <p id="errorMsg" class="error"></p>
         </div>
     </div>
@@ -34,41 +34,41 @@
         
         <!-- Header Section -->
         <header class="hero">
-            <p class="tagline">SIRF TUMHARE LIYE</p>
+            <p class="tagline">MADE ONLY FOR YOU</p>
             <h1 class="title">Happy Birthday, Nisha ✨</h1>
-            <p class="subtitle">"Tu meri subah ka noor, tu meri raat ka suroor... Tere bina sab adhura hai." ❤️</p>
+            <p class="subtitle">"Chand se roshni aur phoolon se khushbu lekar aayi hai ye subah..." ❤️</p>
             <div class="heart-pulse">❤️</div>
         </header>
 
-        <!-- Nayi Heart-Touching Shayari Section -->
+        <!-- Chand-Sitare & Phool-Parinde Wali Shayari Section -->
         <section class="card-section">
-            <p class="tagline">MERE DIL KI BAAT</p>
-            <h2>Dil Se Ek Pyari Shayari 📜</h2>
+            <p class="tagline">FROM MY HEART</p>
+            <h2>Romantic Poetry 📜</h2>
             <p class="story-date">OUR SPECIAL JOURNEY</p>
             <p class="story-text" style="font-style: italic; line-height: 1.8; color: #c9184a; font-weight: 500;">
-                "Tumhari muskaan me jo baat hai,<br>
-                Woh meri zindagi ko sukoon de jaati hai...<br>
-                Duniya me chahe hazaaron chehre ho,<br>
-                Par meri aankhein bas tum par hi ruk jaati hain." ✨
+                "Aasmaan ke chand aur sitaron ko kya dekhun,<br>
+                Meri zindagi ka chand toh mere samne hai...<br>
+                Phoolon ki khushbu aur parindon ki chahak bhi feeki lagti hai,<br>
+                Jab teri ye pyari si muskan mere dil ko chu jaati hai." ✨
             </p>
         </section>
 
         <!-- Time Counter Section -->
         <section class="card-section">
-            <p class="tagline">HAR EK LAMHA KHAS HAI</p>
-            <h2>Hum Sath Hain ⏱️</h2>
+            <p class="tagline">COUNTING EVERY MOMENT</p>
+            <h2>Our Time Together ⏱️</h2>
             <div class="counter-grid">
-                <div class="counter-box"><span id="days">0</span><small>DIN</small></div>
-                <div class="counter-box"><span id="hours">0</span><small>GHANTE</small></div>
-                <div class="counter-box"><span id="minutes">0</span><small>MINUT</small></div>
-                <div class="counter-box"><span id="seconds">0</span><small>SECOND</small></div>
+                <div class="counter-box"><span id="days">0</span><small>DAYS</small></div>
+                <div class="counter-box"><span id="hours">0</span><small>HOURS</small></div>
+                <div class="counter-box"><span id="minutes">0</span><small>MINUTES</small></div>
+                <div class="counter-box"><span id="seconds">0</span><small>SECONDS</small></div>
             </div>
         </section>
 
-        <!-- Photo Gallery Slider (39 Photos + Full View Tap Option) -->
+        <!-- Photo Gallery Slider (39 Photos) -->
         <section class="card-section">
-            <p class="tagline">YAADEIN (TAP PHOTO FOR FULL VIEW)</p>
-            <h2>Hamari Pyaari Tasveerein 🖼️</h2>
+            <p class="tagline">MEMORIES</p>
+            <h2>Our Beautiful Pictures 🖼️</h2>
             <div class="slider-container">
                 <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
                 <div class="slider">
@@ -114,73 +114,73 @@
                 </div>
                 <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-            <p style="font-size:0.75rem; color:#888; margin-top:5px;">💡 Kisibhi photo par tap karke poori screen me dekho</p>
+            <p style="font-size:0.75rem; color:#888; margin-top:5px;">Tap any photo for full screen view</p>
         </section>
 
-        <!-- Multi-page Secret Diary Section -->
+        <!-- Private Diary Section (First Page with Aadi's message) -->
         <section class="card-section">
-            <p class="tagline">MY PRIVATE DIARY</p>
-            <h2>Pyari Diary 📖</h2>
+            <p class="tagline">PRIVATE DIARY</p>
+            <h2>Our Secret Diary 📖</h2>
             <div class="diary-box">
                 <div class="diary-page">
                     <p id="diaryContent" class="diary-text">
                         <strong>First Page - Message from Aadi ❤️:</strong><br><br>
-                        "Meri Pyaari Nisha, yeh diary ka pehla panna sirf tumhare liye hai. Zindagi me kitne bhi utaar-chadhaw aayein, mera ye vada hai ki Aadi hamesha tumhara hath thame rahega. Tum meri sabse khash pasand ho aur rahogi!"
+                        "My dearest Nisha, this first page belongs entirely to you. No matter what comes our way, my promise is to hold your hand forever. You are my absolute favorite person in this entire universe!"
                     </p>
                 </div>
                 <div class="diary-nav">
-                    <button class="btn-sub" onclick="changeDiaryPage(-1)">⏮️ Previous</button>
+                    <button class="btn-sub" onclick="changeDiaryPage(-1)">Previous</button>
                     <span id="pageNum" style="font-size:0.85rem; font-weight:600; color:#c9184a;">Page 1/4</span>
-                    <button class="btn-sub" onclick="changeDiaryPage(1)">Next ⏭️</button>
+                    <button class="btn-sub" onclick="changeDiaryPage(1)">Next</button>
                 </div>
             </div>
         </section>
 
         <!-- Scratch Card / Secret Message Section -->
         <section class="card-section">
-            <p class="tagline">CHHUPA HUAA PAIGHAM</p>
+            <p class="tagline">HIDDEN MESSAGE</p>
             <h2>Secret Message 💌</h2>
             <div class="scratch-box" onclick="revealSecret(this)">
-                <p class="hidden-msg">"Tum meri zindagi ka sabse haseen tohfa ho. Jab tak tum mere sath ho, mujhe kisi aur ki khwahish nahi. I Love You So Much! ❤️"</p>
-                <p class="scratch-cover">👆 Tap karke Secret Message dekho!</p>
+                <p class="hidden-msg">"You are the most precious gift of my life. As long as you are with me, I need nothing else. I Love You So Much! ❤️"</p>
+                <p class="scratch-cover">Tap here to reveal the secret message</p>
             </div>
         </section>
 
         <!-- Interactive Note Jar Section -->
         <section class="card-section">
-            <p class="tagline">MERE DIL KI BAATEIN</p>
-            <h2>Pyari Wajah Tumhare Liye 🏺</h2>
+            <p class="tagline">REASONS WHY I LOVE YOU</p>
+            <h2>Love Notes Jar 🏺</h2>
             <div class="note-jar-card">
-                <p id="noteText" class="note-display">Neeche button dabao aur padho main tumse kyu itna pyaar karta hu! 💕</p>
-                <button class="btn-primary" onclick="pickNote()">Nayi Baat Dekho 💌</button>
+                <p id="noteText" class="note-display">Click the button below to read a cute note! 💕</p>
+                <button class="btn-primary" onclick="pickNote()">Pick Another Note 💌</button>
             </div>
         </section>
 
         <!-- Lock Letter / Love Letter Section -->
         <section class="card-section letter-card">
-            <p class="tagline">MERE DIL SE</p>
-            <h2>Tumhare Naam Ek Khat ✉️</h2>
+            <p class="tagline">FROM MY HEART</p>
+            <h2>A Letter For You ✉️</h2>
             <div class="letter-body">
-                <h3>Meri Pyaari Nisha,</h3>
+                <h3>Dearest Nisha,</h3>
                 <p>
-                    Tumhara yeh janamdin mere liye kisi tyohar se kam nahi hai. Isliye isko ekdam grand celebration banaya hai. 
-                    Bhagwan se yahi dua hai ki tumhari har khushi lambi ho aur tum hamesha meri zindagi ki roshni bankar raho.
+                    Your birthday is the most special celebration for me. May your life be filled with endless joy, 
+                    and may you always keep smiling like this. I am right here with you, always.
                 </p>
-                <p class="sign">Hamesha aur sirf tumhara Aadi ❤️</p>
+                <p class="sign">Yours forever, Aadi ❤️</p>
             </div>
         </section>
 
         <!-- Celebration Mode Section -->
         <section class="card-section celebration-card">
             <p class="tagline">PARTY TIME</p>
-            <h2>Jashn-e-Janamdin 🎉</h2>
-            <p style="font-size: 0.9rem; margin-bottom: 15px; color: #555;">Button daba kar thodi celebration aur pyaar barsaao!</p>
+            <h2>Birthday Celebration 🎉</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 15px; color: #555;">Click the button below to trigger celebration mode!</p>
             <button class="btn-primary" onclick="triggerCelebration()">Surprise Celebration 🎇</button>
         </section>
 
-        <!-- Playlist / Music Player Section with Nisha 11 to 16 Photos Grid -->
+        <!-- Playlist / Music Player Section -->
         <section class="card-section">
-            <p class="tagline">HAMARE GAANE AUR YAADEIN</p>
+            <p class="tagline">OUR SONGS & MEMORIES</p>
             <h2>Music Playlist 🎵</h2>
             
             <div class="music-photo-grid">
@@ -206,20 +206,18 @@
             </div>
         </section>
 
-        <!-- Secret Video Section (Sabse Niche & Locked with 'aadi' password) -->
+        <!-- Secret Video Section (Locked with 'aadi' at the very bottom) -->
         <section class="card-section secret-video-section">
             <p class="tagline">SECRET MEMORY VIDEO</p>
             <h2>Special Video For Nisha 🎥</h2>
             
-            <!-- Video Lock Box -->
             <div id="videoLockBox" class="video-lock-box">
-                <p style="font-size:0.85rem; color:#777; margin-bottom:10px;">🔒 Enter Password to Watch Video</p>
-                <input type="password" id="videoPassInput" placeholder="Password daalo (aadi)">
+                <p style="font-size:0.85rem; color:#777; margin-bottom:10px;">Enter Password to Watch Video</p>
+                <input type="password" id="videoPassInput" placeholder="Enter Password">
                 <button class="btn-primary" onclick="unlockVideo()" style="margin-top:10px;">Unlock Video 🎬</button>
                 <p id="videoErrorMsg" class="error"></p>
             </div>
 
-            <!-- Hidden Video Player (Unhides on unlocking) -->
             <div id="videoPlayerBox" style="display:none; margin-top:15px;">
                 <video id="secretVideo" controls style="width:100%; border-radius:15px; border:2px solid #ff4d6d;">
                     <source src="video.mp4" type="video/mp4">

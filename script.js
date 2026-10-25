@@ -1,4 +1,4 @@
-// 1. Main Password Check Logic & Autoplay
+// 1. Password Check Logic & Autoplay
 function checkPassword() {
     let inputVal = document.getElementById("passInput").value.trim().toLowerCase();
     if (inputVal === "17 april" || inputVal === "17-april" || inputVal === "17") {
@@ -10,7 +10,7 @@ function checkPassword() {
             console.log("Autoplay blocked, user interaction required.");
         });
     } else {
-        document.getElementById("errorMsg").innerText = "Galat password! Sahi date daalo.";
+        document.getElementById("errorMsg").innerText = "Incorrect password! Please try again.";
     }
 }
 
@@ -28,10 +28,10 @@ function closePhotoModal() {
 
 // 3. Multi-page Diary Logic
 const diaryPages = [
-    `<strong>First Page - Message from Aadi ❤️:</strong><br><br>"Meri Pyaari Nisha, yeh diary ka pehla panna sirf tumhare liye hai. Zindagi me kitne bhi utaar-chadhaw aayein, mera ye vada hai ki Aadi hamesha tumhara hath thame rahega. Tum meri sabse khash pasand ho aur rahogi!"`,
-    `<strong>Page 2 - Special Moments 💕:</strong><br><br>"Tumse milne ke baad har ek din special ban gaya hai. Jab tum muskurati ho, lagta hai poori duniya ki khushi ek jagah simat aayi ho."`,
-    `<strong>Page 3 - Promises 🌟:</strong><br><br>"Main vada karta hoon ki tumhare har birthday ko itna hi magical banaunga. Hamesha tumhare sapnon ko support karunga aur tumhara khayal rakhunga."`,
-    `<strong>Page 4 - Forever & Always 🌹:</strong><br><br>"Chahe hum kahin bhi ho, mera dil hamesha tumhare paas hi rahega. Happy Birthday again, my love Nisha!"`
+    `<strong>First Page - Message from Aadi ❤️:</strong><br><br>"My dearest Nisha, this first page belongs entirely to you. No matter what comes our way, my promise is to hold your hand forever. You are my absolute favorite person in this entire universe!"`,
+    `<strong>Page 2 - Special Moments 💕:</strong><br><br>"Every single day feels magical ever since I found you. Your smile brings absolute peace to my heart."`,
+    `<strong>Page 3 - Promises 🌟:</strong><br><br>"I promise to support all your dreams, stand by you through thick and thin, and cherish every moment we share together."`,
+    `<strong>Page 4 - Forever & Always 🌹:</strong><br><br>"No matter where we are, my heart will always belong to you. Happy Birthday once again, my love Nisha!"`
 ];
 
 let currentDiaryIndex = 0;
@@ -45,18 +45,17 @@ function changeDiaryPage(direction) {
     document.getElementById("pageNum").innerText = `Page ${currentDiaryIndex + 1}/${diaryPages.length}`;
 }
 
-// 4. Secret Video Unlock (Password: 'aadi')
+// 4. Secret Video Unlock
 function unlockVideo() {
     let pass = document.getElementById("videoPassInput").value.trim().toLowerCase();
     if (pass === "aadi") {
         document.getElementById("videoLockBox").style.display = "none";
         document.getElementById("videoPlayerBox").style.display = "block";
         
-        // Stop background music when video plays
         const bgMusic = document.getElementById("bgMusic");
         if (bgMusic) bgMusic.pause();
     } else {
-        document.getElementById("videoErrorMsg").innerText = "Galat password! Hint: Name";
+        document.getElementById("videoErrorMsg").innerText = "Incorrect password! Access denied.";
     }
 }
 
@@ -67,7 +66,7 @@ function revealSecret(element) {
 
 // 6. Celebration Alert
 function triggerCelebration() {
-    alert("🎉 Happy Birthday Meri Jaan Nisha! Aadi loves you so much! 💖✨");
+    alert("🎉 Happy Birthday My Love Nisha! Aadi loves you endlessly! 💖✨");
 }
 
 // 7. Live Time Counter (Set to April 2025)
@@ -110,11 +109,11 @@ function moveSlide(step) {
 
 // 9. Interactive Note Jar Logic
 const notes = [
-    "Tumhari pyari si muskan mera pura din bana deti hai! ✨",
-    "Tum meri zindagi ka sabse khoobsurat hissa ho. ❤️",
-    "Tumhe paakar main duniya ka sabse khushnaseeb insaan ban gaya hoon. 🌟",
-    "Tumse baatein kiye bina mera ek din bhi nahi guzarta. 🥰",
-    "Hamesha aise hi Aadi ke sath rehna, meri jaan! 🌹"
+    "Your beautiful smile makes my entire day brighter! ✨",
+    "You are the most gorgeous part of my life. ❤️",
+    "Finding you made me the luckiest person in this world. 🌟",
+    "Not a single day goes by without thinking about you. 🥰",
+    "Forever staying by your side, my love! 🌹"
 ];
 
 function pickNote() {
